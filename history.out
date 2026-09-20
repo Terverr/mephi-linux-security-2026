@@ -1,0 +1,115 @@
+    1  man useradd
+    2  sudo date --set="Sat Aug 20 15:15:10 EEST 2026"
+    3  cd ..
+    4  ls
+    5  cd 'Рабочий стол'/
+    6  cd dz1
+    7  history > ~/history.out
+    8  stat /home/user1 > ~/stat.out
+    9  stat /home/terver/cat1 >> ~/stat.out
+   10  stat /home/terver/chown1 >> ~/stat.out
+   11  stat /home/terver/chown1/chown > ~/getcap.out
+   12  stat /home/terver/cat1/cat >> ~/getcap.out
+   13  userdel user1
+   14  userdel -r user1
+   15  sudo userdel -r user1
+   16  pid 
+   17  find pid=39510
+   18  kill 39510
+   19  sudo kill 39510
+   20  sudo userdel -r user1
+   21  ps -p 39510
+   22  sudo userdel -r user1
+   23  sudo userdel -f user1
+   24  sudo kill -9 39510
+   25  123
+   26  cat /etc/shadow
+   27  sudo setcap "cap_dac_read_search-ep" cap
+   28  sudo setcap "cap_dac_read_search-ep" cat
+   29  getcap ./cat
+   30  sudo setcap "cap_dac_read_search=ep" cat
+   31  getcap ./cat
+   32  ./cat /etc/shadow
+   33  cd /
+   34  ls
+   35  cd home/terver/
+   36  ls
+   37  mkdir chown1
+   38  cd chown1
+   39  whereis chown
+   40  cp /usr/bin/chown /home/terver/chown1
+   41  ls
+   42  touch test
+   43  ls
+   44  man chown
+   45  chown user1 test
+   46  getcap ./chown
+   47  sudo setcap "cap_chown=ep" chown
+   48  getcap ./chown
+   49  chown user1 test
+   50  ./chown user1 test
+   51  ls -l test
+   52  sudo visudo
+   53  su user1
+   54  sudo userdel -r user1
+   55  sudo useradd -u 1234 -g students user1
+   56  grep user1 /etc/passwd
+   57  grep user1 /etc/group
+   58  sudo userdel -r user1
+   59  grep user1 /etc/group
+   60  grep user1 /etc/passwd
+   61  id user1
+   62  ls -l /home/
+   63  tail -1 /etc/passwd
+   64  cat /etc/group
+   65  su
+   66  sudo useradd -u 1234 -g students user1
+   67  id user1
+   68  chage -M 90 user1
+   69  sudo chage -M 90 user1
+   70  grem user1 /etc/shadow
+   71  grep user1 /etc/shadow
+   72  sudo grep user1 /etc/shadow
+   73  passwd user1
+   74  sudo passwd user1
+   75  find / -perm -4000 -fprintf /root/suid.txt '%#m %u %p\n'
+   76  sudo find / -perm -4000 -fprintf /root/suid.txt '%#m %u %p\n'
+   77  sudo cat /root/suid.txt
+   78  sudo ps -eo pid,ruid,euid,comm | awk '$2 >= 1000 && $3 == 0' > /root/procout.txt
+   79  sudo ps -eo pid,ruid,euid,comm | awk '$2 >= 1000 && $3 == 0' > procout.txt
+   80  cat procout.txt
+   81  whereis cat
+   82  ls
+   83  mkdir cat1
+   84  mkdir chown1
+   85  cd cat1
+   86* 
+   87  cp /usr/bin/cat /home/terver/cat1
+   88  cat /etc/shadow
+   89  sudo setcap "cap_dac_read_search=ep" cap
+   90  sudo setcap "cap_dac_read_search=ep" cat
+   91  getcap ./cat
+   92  ./cat /etc/shadow
+   93  cd ..
+   94  ls
+   95  cd chown1
+   96  whereis chown
+   97  cp /usr/bin/chown /home/terver/chown1
+   98  touch test
+   99  ls -l test
+  100  chown root test
+  101  sudo setcat "cap_chown=ep" chown
+  102  sudo setcap "cap_chown=ep" chown
+  103  getcap ./chown
+  104  ./chown root test
+  105  ls -l test
+  106  sudo visudo
+  107  cd ..
+  108  ls
+  109  cd 'Рабочий стол'
+  110  cd dz1/
+  111  ls
+  112  rm getcap.out
+  113  rm history.out
+  114  rm stat.out
+  115  history > ~/history.out
