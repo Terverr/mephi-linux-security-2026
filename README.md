@@ -109,6 +109,6 @@ sudo -u user1 sudo date --set="Sat Sep 20 18:20:20 EEST 2026"
 history > ~/history.out 
 stat /home/user1 > ~/stat.out
 stat /home/terver/cat1/cat >> ~/stat.out
-stat /home/terver/chown1/chown >> ~/stat.out # для каждой утилиты из раздела 3 и 4
+stat /home/terver/chown1/chown >> ~/stat.out
 getcap /home/terver/chown1/chown > ~/getcap.out
 ```
